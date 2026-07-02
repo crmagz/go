@@ -4,7 +4,8 @@
 
 This repository is a principals-first tutorial for learning Go. Each lesson covers one
 language topic, grouped by domain, starting from primitives and control flow and
-building up to structs, collections, methods, interfaces, errors, and concurrency.
+building up to structs, collections, methods, interfaces, errors, concurrency, and
+finally running Go services at scale in production.
 
 The goal is depth over breadth: understand *why* Go works the way it does (value
 semantics, explicit error handling, goroutines/channels as the concurrency primitive)
@@ -37,16 +38,21 @@ go/
 │   ├── 02-type-assertions-and-switches/
 │   ├── 03-stringers/
 │   └── 04-errors/
-└── 05-concurrency/
-    ├── 01-goroutines/
-    ├── 02-channels/
-    ├── 03-buffered-channels/
-    ├── 04-range-and-close/
-    ├── 05-select/
-    ├── 06-select-default/
-    ├── 07-sync-mutex/
-    ├── 08-sync-rwmutex/
-    └── 09-concurrency-patterns/
+├── 05-concurrency/
+│   ├── 01-goroutines/
+│   ├── 02-channels/
+│   ├── 03-buffered-channels/
+│   ├── 04-range-and-close/
+│   ├── 05-select/
+│   ├── 06-select-default/
+│   ├── 07-sync-mutex/
+│   ├── 08-sync-rwmutex/
+│   └── 09-concurrency-patterns/
+└── 06-running-at-scale/
+    ├── 01-goroutines-vs-threads/
+    ├── 02-goroutine-introspection/
+    ├── 03-pprof-profiling/
+    └── 04-graceful-shutdown/
 ```
 
 Every lesson is `package main` with a `func main()` already declared. This is
@@ -112,8 +118,16 @@ containing numbered, kebab-case lesson directories (`NN-topic-name`), each with 
 | 08 | [sync-rwmutex](05-concurrency/08-sync-rwmutex) | sync.RWMutex |
 | 09 | [concurrency-patterns](05-concurrency/09-concurrency-patterns) | More concurrency topics (grab-bag, expanded over time) |
 
-All lessons are currently scaffolded (empty `README.md` + `main.go` stub) but not yet
-authored. Content and exercises are added one lesson at a time, not all at once.
+### 06-running-at-scale
+
+| # | Lesson | Topic |
+|---|--------|-------|
+| 01 | [goroutines-vs-threads](06-running-at-scale/01-goroutines-vs-threads) | Goroutines vs OS threads on Linux |
+| 02 | [goroutine-introspection](06-running-at-scale/02-goroutine-introspection) | Goroutine introspection and leak detection |
+| 03 | [pprof-profiling](06-running-at-scale/03-pprof-profiling) | pprof: CPU and heap profiling |
+| 04 | [graceful-shutdown](06-running-at-scale/04-graceful-shutdown) | Graceful shutdown and OS signals |
+
+All 6 domains (27 lessons) are fully authored.
 
 ## Rules for AI assistance (IMPORTANT — read before helping with any exercise)
 

@@ -56,8 +56,14 @@ Open the lesson's `README.md` first, then fill in the `TODO` in its `main.go`.
 8. [sync.RWMutex](05-concurrency/08-sync-rwmutex)
 9. [More Concurrency Topics](05-concurrency/09-concurrency-patterns)
 
-Lessons are scaffolded ahead of time but authored incrementally — see
-[CLAUDE.md](CLAUDE.md) for how this repo is structured and how AI assistance should
+### 06 · Running Go at Scale
+
+1. [Goroutines vs OS Threads](06-running-at-scale/01-goroutines-vs-threads)
+2. [Goroutine Introspection and Leaks](06-running-at-scale/02-goroutine-introspection)
+3. [pprof: CPU and Heap Profiling](06-running-at-scale/03-pprof-profiling)
+4. [Graceful Shutdown and Signals](06-running-at-scale/04-graceful-shutdown)
+
+See [CLAUDE.md](CLAUDE.md) for how this repo is structured and how AI assistance should
 be used while working through it (hints only, no solutions).
 
 ## Documentation
