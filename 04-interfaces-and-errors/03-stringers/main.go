@@ -2,18 +2,27 @@ package main
 
 import "fmt"
 
-// TODO: define type Temperature float64 with a method
-// String() string returning "X.X°F" (one decimal place),
-// satisfying fmt.Stringer.
+// Temperature represents a thermal value with custom string formatting
+type Temperature float64
 
-// TODO: define type Distance float64 with no String() method,
-// so it falls back to fmt's default numeric formatting.
+// String satisfies fmt.Stringer using a value receiver
+func (t Temperature) String() string {
+	return fmt.Sprintf("%.1f°F", float64(t))
+}
+
+// Distance represents a spatial value with default formatting
+type Distance float64
 
 func main() {
-	// TODO: temp := Temperature(72); print it via fmt.Println and via
-	// fmt.Printf("%v", ...) — both should print 72.0°F automatically.
+	// 1. Testing Temperature (uses custom String() method)
+	temp := Temperature(72)
+	fmt.Println(temp)
+	fmt.Printf("%v\n", temp)
 
-	// TODO: dist := Distance(100); print it the same two ways to contrast —
-	// both should print the plain number 100, since Distance has no String().
-	fmt.Println("implement me")
+	fmt.Println() // Clean line break
+
+	// 2. Testing Distance (falls back to default float formatting)
+	dist := Distance(100)
+	fmt.Println(dist)
+	fmt.Printf("%v\n", dist)
 }
